@@ -1,6 +1,6 @@
-Setup.bat
-GenerateProjectFiles.bat
+call Setup.bat
+call GenerateProjectFiles.bat
 
-cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319
-
-MSBuild.exe UE4.sln /t:Rebuild /p:Configuration=Development Editor;Platform=Win64
+call C:\"Program Files (x86)"\"Microsoft Visual Studio 14.0"\Common7\Tools\vsvars32
+call devenv UE4.sln /Rebuild ""Development Editor"|Win64"
+PAUSE
